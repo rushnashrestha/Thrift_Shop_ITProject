@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrift Shop</title>
+    <script src="https://kit.fontawesome.com/0ae4239092.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/Logo.png" class="logo" width="120px" height="100 px"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="bag" data-quantity="0"><a class="active" href="cart.html"><i
+                            class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="contact-header">
+        <h2>Cart</h2>
+        <p>Check your orders.</p>
+    </section>
+
+    <section class="cart-container container">
+        <a href="home.html" class="back-homepage">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span>Back To Home</span>
+        </a>
+        <h2 class="cart-s-title">Shopping Cart</h2>
+        <div class="cart-box">
+            <div class="cart-data">
+                <div id="cartItem">
+
+                </div>
+            </div>
+            <div class="cart-t">
+                <div id="cartTotal"></div>
+                <a href="#" class="checkout-btn">Checkout</a>
+            </div>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/Logo.png" alt="" width="120px" height="100 px" class="logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>Matidevi, Kathmandu</p>
+            <p><strong>Phone:</strong>+977 9880409264</p>
+            <p><strong>Opening Hours:</strong>10:00 A.M.- 7:00 P.M., Sunday-Friday</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100083633439174"><i
+                        class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">Track My Order</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Secured Payment Gateway</p>
+            <img src="img/Esewa_logo.png" alt="" width="100px" height="50 px">
+        </div>
+
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i>2023 Rushna- Thrift Shop</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
