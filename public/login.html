@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrift Shop</title>
+    <script src="https://kit.fontawesome.com/0ae4239092.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="form.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/Logo.png" class="logo" width="120px" height="100 px"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a class="active" href="register.html"><i class="fa-solid fa-user"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div class="conatiner">
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>Log In</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="Email">
+                </div>
+                <div class="input-box">
+                    <i class="fa-regular fa-eye-slash" id="show-password"></i>
+                    <input type="password" placeholder="Password" name="Password" id="password">
+                </div>
+                <div class="button">
+                    <a href="home.html">
+                        <button type="button" class="btn" onclick="validation()">Enter</button>
+                    </a>
+                </div>
+                
+                <div class="group">
+                    <span>Do not have an Account?.</span>
+                    <span><a href="register.html">Register</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/Logo.png" alt="" width="120px" height="100 px" class="logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>Matidevi, Kathmandu</p>
+            <p><strong>Phone:</strong>+977 9880409264</p>
+            <p><strong>Opening Hours:</strong>10:00 A.M.- 7:00 P.M., Sunday-Monday</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100083633439174"><i
+                        class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="register.html">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">Track My Order</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Secured Payment Gateway</p>
+            <img src="img/Esewa_logo.png" alt="" width="100px" height="50 px">
+        </div>
+
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i>2023 Rushna- Thrift Shop</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+
+function validation() {
+    var email = document.Formfill.Email.value;
+    var password = document.Formfill.Password.value;
+
+    if (email.trim() === "") {
+        document.getElementById("result").innerHTML = "Enter email address*";
+        return false;
+    } else if (password.trim() === "") {
+        document.getElementById("result").innerHTML = "Enter Password*";
+        return false;
+    } else if (password.length < 8) {
+        document.getElementById("result").innerHTML = "Password must be at least 8 characters*";
+        return false;
+    }
+
+    // If all conditions are met, you can redirect to the home page
+    window.location.href = "home.html";
+
+    // To prevent the default form submission
+    return false;
+}
+
+
+      const showPassword = document.querySelector("#show-password");
+const passwordField = document.querySelector("#password");
+
+showPassword.addEventListener("click", function () {
+    this.classList.toggle("fa-eye-slash");
+    this.classList.toggle("fa-eye");
+
+    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+    passwordField.setAttribute("type", type);
+});
+
+    </script>
+</body>
+
+</html>
